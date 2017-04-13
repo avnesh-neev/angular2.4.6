@@ -1,0 +1,178 @@
+.adminschema{
+    .header {
+        @include padding(.235rem, 1.6rem, 0.1rem, 1.667rem);
+        .page-title {
+            font-family: open_sanssemibold;
+            color: $titleColor;
+            text-transform: uppercase;
+            font-size: 1.334rem;
+            @include margin(1rem, 1rem, 1rem, 0);
+            float: left;
+        }
+        .dropdown {
+            float: left;
+            margin: 0;
+            ul {
+                margin: -1px 0 0 0;
+            }
+            dd {
+                position: relative;
+                margin: 0px;
+                padding: 0px;
+                ul {
+                    background-color: $white;
+                    border-radius: 3px;
+                    border: 0;
+                    color: $secondarytxt;
+                    display: none;
+                    left: 0px;
+                    padding: 0;
+                    position: absolute;
+                    top: 0px;
+                    width: 174px;
+                    border: 1px solid darken($white,10%);
+                    list-style: none;
+                    height: auto;
+                    overflow: auto;
+                    font-size: 1.1rem;
+                    z-index: 1;
+                    li{
+                        padding: 0.5rem;
+                        display: block;
+                        cursor: pointer;
+                        line-height: 1.334rem;
+                        .c-input {
+                            color: $secondarytxt;
+                            display: block;
+                            margin: 0;
+                            padding-right: 0;
+                        }
+                        &:hover {
+                            background-color: $headtxt;
+                            label {
+                                color: $white;
+                            }
+                        }
+                        input {
+                            margin: 0 0.25rem 0 0;
+                        }
+                    }
+                }
+            }
+            dt {
+                margin: 0px;
+                padding: 0px;
+                a {
+                    vertical-align: middle;
+                    background-color: $white;
+                    background: url('../assets/icons/Drop_Down.svg') no-repeat right 0.75rem center;
+                    display: block;
+                    padding: 0.5rem 2rem 0.5rem 0.5rem;
+                    font-size: 1.1rem;
+                    overflow: hidden;
+                    border: 1px solid darken($white,10%);
+                    color: $secondarytxt;
+                    border-radius: 3px;
+                    margin: 0.5rem 0 0 0;
+                    span {
+                        cursor: pointer;
+                        display: inline-block;
+                        text-shadow: none;
+                        font-weight: normal;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+            a,&:visited {
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+                font-size: 12px;
+            }
+        }
+        .multiSel span {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .dropdown span.value {
+            display: none;
+        }
+        select {
+            @include margin(0.4rem, 0, 0, 0);
+        }
+    }
+    .adminschema-content{
+        padding: 1.667rem;
+        button {
+            font-size: 1.1rem;
+        }
+        .table-responsive {
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            margin: 1rem 0 0;
+            table {
+                //				min-width: 1018px;
+                width: 100%;
+                border-radius: 0;
+                box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+                thead,
+                tfoot {
+                    background: $theadbg;
+                    font-size: 1.25rem;
+                    font-family: open_sanssemibold;
+                    tr {
+                        background: transparent;
+                        th {
+                            text-align: left;
+                            color: $white;
+                            border-bottom: none;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        background: $white;
+                        cursor: pointer;
+                        &:nth-child(even) {
+                            background: $troweven;
+                        }
+                        &:hover {
+                            background: $trowhov;
+                        }
+
+                        td{
+                            border-right: 1px solid darken($white,10%);
+                            &:first-child {
+                                text-align: left;
+                            }
+                            text-align: center;
+                            &.status{
+                                span {
+                                    height: 12px;
+                                    width: 12px;
+                                    display: inline-block;
+                                    background-size: 100%;
+                                    @include margin(0, 0.5rem, 0, 0);
+                                    &.enabled {
+                                        background-image: url(../assets/icons/Cirle_Green_1x.svg);
+                                    }
+                                    &.disabled {
+                                        background-image: url(../assets/icons/Cirle_Grey_1x.svg);
+                                    }
+                                }
+                            }
+                            label {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+                .tractive{
+                    background: $trowhov;
+                }
+            }
+        }
+    }
+}

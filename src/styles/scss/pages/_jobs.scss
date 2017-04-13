@@ -1,0 +1,121 @@
+//jobs
+.jobs {
+	.header {
+		@include padding(.25rem, 1.667rem, .25rem, 1.667rem);
+		//        background: $header;
+		.page-title {
+			font-family: open_sanssemibold;
+			color: $titleColor;
+			font-size: 1.334rem;
+			@include margin(1rem, 0, 1rem, 0);
+			span {
+				color: $primarytxt;
+				padding-left: 1rem;
+				font-family: open_sansregular;
+				font-size: 1.1667rem;
+			}
+		}
+		.header-config-connector-icons {
+			@include margin(1rem, 0, 1rem, 0);
+			@extend .fr;
+			.connector-icon-add-new {
+				@include padding(0, 1rem, 0, 1.6rem);
+				color: $theadbg;
+				font-family: open_sanssemibold;
+				text-decoration: none;
+				font-size: 1.1667rem;
+				&:hover {
+					color: $buttonhover;
+				}
+			}
+			.connector-icon-download {
+				@include padding(0, 0rem, 0, 1.6rem);
+				border-left: 1px solid $aborder;
+				color:$aborder;
+				font-size: 1.3rem;
+				&:hover {
+					color: $theadbg;
+				}
+			}
+		}
+	}
+	.jobs-content {
+		padding: 1.667rem;
+		.table-responsive {
+            max-height: 76vh;
+            overflow: auto;
+			table {
+                min-width: 1048px;
+				tbody {
+					tr {
+						td{
+							font-family: open_sansregular;
+							img{
+								width:2rem;
+							}
+							h4 {
+								text-align: center;
+								color: $secondarytxt;
+								padding: 2rem 0;
+							}
+							&.status {
+								text-transform: uppercase;
+								font-family: open_sanssemibold;
+								span {
+									height: 12px;
+									width: 12px;
+									display: inline-block;
+									background-size: 100%;
+									@include margin(0, 0.5rem, 0, 0);
+									&.process {
+										background-image: url(../assets/icons/Cirle_Blue_1x.svg);
+									}
+									&.success {
+										background-image: url(../assets/icons/Cirle_Green_1x.svg);
+									}
+									&.fail {
+										background-image: url(../assets/icons/Cirle_Red_1x.svg);
+									}
+								}
+							}
+							.actions {
+								a{
+									color:$primarytxt;
+									cursor: pointer;
+									padding:0 0.5rem;
+									display: inline-block;
+									font-size:1.2rem;
+									.icon-delete{
+									}
+									&:hover {
+										color:$headtxt;
+									}
+									.icon-export{
+										font-size:1.3rem;
+									}
+								}
+								.action-buttons {
+									@include padding(0, 1rem, 0, 0rem);
+									@include margin(-0.2rem, 0.3rem, 0, 0rem);
+									border-right: 1px solid $primarytxt;
+									&:hover {
+										color:$theadbg;
+									}
+								}
+							}
+						}
+						.jobs-action{
+							img{
+								padding-right:0.3rem;
+								margin-right:1rem;
+							}
+						}
+					}
+					.tractive{
+						background: $trowhov;
+					}
+				}
+			}
+		}
+	}
+}

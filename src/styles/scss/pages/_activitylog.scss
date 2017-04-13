@@ -1,0 +1,115 @@
+//ACTIVITY LOG
+.activitylog {
+    .header {
+        @include padding(0rem, 0.9375rem, 0rem, 0rem);
+//        background: $header;
+        .back {
+            padding: 1.1rem 1.5rem;
+            background-color: $backbtnclr;
+            font-size: 1.3rem;          
+        }
+        .page-title {
+            display: inline-block;
+            font-family: open_sansbold;
+			color: $titleColor;
+			text-transform: uppercase;
+			font-size: 1.334rem;
+            @include padding(1rem, 0, 0, 1.5rem);
+        }
+        .dropdown {
+            padding: 0.6rem 0 0 0;
+            p {
+                float: left;
+                line-height: 1.5rem;
+                padding:0.8rem 1rem 0rem 0.5rem;
+                font-family: open_sanssemibold;
+				font-size: 1.1667rem;
+            }
+            select {
+                float: left;
+                width: 15rem;
+                height: 3rem;
+                background-color: $white;
+            }
+        }
+    }
+    .activitylog-content {
+        @include padding(0, 1.7rem, 0, 1.7rem);
+        @include margin(2rem, 0, 0, 0);
+        .head {
+            color: $headtxt;
+            font-family: open_sansbold;
+            font-size: 1.6rem;
+        }
+        .table-responsive {
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            table {
+                min-width: 1018px;
+                width: 100%;
+                border-radius: 0;
+                box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+                tbody {
+                    tr {
+                        background: $white;
+                        &:nth-child(even) {
+                            background: $troweven;
+                        }
+                        &:hover {
+                            background: lighten($trowhov, 0%);
+                            td {
+                                .actions {
+                                    .play {
+                                        ul.action-buttons {
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    td {
+                        font-size: 1.1667rem;
+                        color: $primarytxt;
+						font-family: open_sansregular;
+                        &.status {
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            span {
+                                height: 12px;
+                                width: 12px;
+                                display: inline-block;
+                                background-size: 100%;
+                                @include margin(0, 0.5rem, 0, 0);
+                                &.process {
+                                    background-image: url(../assets/icons/Cirle_Blue_1x.svg);
+                                }
+                                &.success {
+                                    background-image: url(../assets/icons/Cirle_Green_1x.svg);
+                                }
+                                &.fail {
+                                    background-image: url(../assets/icons/Cirle_Red_1x.svg);
+                                }
+                            }
+                        }
+                        .error {
+                            color: lighten($black, 75%);
+                        }
+                    }
+                }
+                thead,
+                tfoot {
+                    background: $theadbg;
+					font-size: 1.25rem;
+					font-family: open_sanssemibold;
+                    tr {
+                        background: transparent;
+                        th {
+                            text-align: left;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

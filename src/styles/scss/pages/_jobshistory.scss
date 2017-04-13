@@ -1,0 +1,98 @@
+.history{
+	.header {
+		.back{
+			@extend .fl;
+		}
+//		background: $header;
+		.page-title {
+			font-family: open_sanssemibold;
+			color: $headtxt;
+			font-size: 1.2rem;
+			@include padding(1.1rem, 1rem, 1.1rem, 1rem);
+			margin-bottom:0rem;
+			text-transform: uppercase;
+			@extend .fl;
+		}
+		.view-dropdown{
+			@extend .fr;
+			@include padding(0.8rem, 1.667rem, 0rem, 1rem);
+			label{
+				font-family: open_sanssemibold;
+				color: $primarytxt;
+				font-size: 1.1rem;
+				text-transform: uppercase;
+				padding-right: 1rem;
+				padding-top: 0.5rem;
+			}
+			.c-select {
+				width:15rem;
+				border: 1px solid lighten($black, 90%);
+				option{
+					background: $white;
+				}
+			}
+		}
+	}
+	.jobs-history-content{
+        padding: 1.667rem;
+		.table-responsive {
+			box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+			table {
+				min-width: 1018px;
+				width: 100%;
+				border-radius: 0;
+				thead,
+				tfoot {
+					background: $theadbg;
+					font-size: 1.1rem;
+					font-family: open_sanssemibold;
+					tr {
+						background: transparent;
+						th {
+							@include padding(1.2rem, 1rem, 1.1rem, 1rem);
+
+							text-align: left;
+							color: $white;
+						}
+					}
+				}
+				tbody {
+					tr {
+						background: $white;
+						&:nth-child(even) {
+							background: $troweven;
+						}
+						&:hover {
+							background: $trowhov;
+							opacity: 10%;
+						}
+					}
+					td {
+						font-size: 1.1rem;
+						color: $primarytxt;
+						&.status {
+							text-transform: uppercase;
+							font-family: open_sanssemibold;
+							span {
+								height: 12px;
+								width: 12px;
+								display: inline-block;
+								background-size: 100%;
+								@include margin(0, 0.5rem, 0, 0);
+								&.process {
+									background-image: url(../assets/icons/Cirle_Blue_1x.svg);
+								}
+								&.success {
+									background-image: url(../assets/icons/Cirle_Green_1x.svg);
+								}
+								&.fail {
+									background-image: url(../assets/icons/Cirle_Red_1x.svg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

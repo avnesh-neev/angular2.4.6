@@ -1,0 +1,515 @@
+@import 'common/headertop';
+@import 'common/leftSection';
+@import 'common/toggleswitch';
+@import 'common/modal-popup';
+@import 'common/animate';
+@import 'common/steps-header';
+@import 'common/ng2-select';
+@import 'common/jquery-ui';
+@import 'common/bootstrap-select';
+@import 'common/datetimepicker';
+@import 'icomoon';
+
+a {
+    cursor: pointer;
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+input {
+    &[type="text"]{
+        font-family: open_sansregular;
+        padding:0.5rem 1rem;
+        border-radius: 3px;
+        font-size: 1.1667rem;
+        color:$primarytxt;
+        display: inline-block;
+    }
+}
+
+.header {
+    //	height: 52px;
+    background: $white;
+    box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.authentication-content, .taskmanager-content, .parameter-content, .summary-content, .taskinfo-content, .create-manage-job-content, .dimensionsdetail-content, .admincreatemodule-content-area {
+    background: $white;
+    margin: 1.667rem 1.667rem 0;
+    border-radius: 3px;
+    box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);    
+}
+
+// TOOLTIP STYLE CHANGES
+.tooltip-inner {
+    max-width: 350px;
+    word-wrap: break-word;
+}
+
+//DATEPICKER INPUT
+.input-date {
+    width:15rem;
+    padding: 0 0.5rem 0 0;
+    float: left;
+    position: relative;
+    i {
+        position: absolute;
+        top: 0.75rem;
+        right: 1.25rem;
+        z-index: 400;
+    }
+    input[type="text"] {
+        z-index: 300;
+        border-bottom-right-radius: 3px !important;
+        border-top-right-radius: 3px !important;
+    }
+}
+
+label{
+    color:$aborder;
+}
+.wj-template .wj-input{
+    width: 37rem;
+    min-height: 2.8rem;
+    .wj-input-group{
+        height: 2.8rem;
+    }
+}
+
+.btn-primary{
+    background: $theadbg;
+    border: 1px solid $theadbg;
+    &:hover {
+        background: $menunav;
+        border: 1px solid $menunav;
+    }
+    &.disabled, &:disabled {
+        color: $secondarytxt;
+        background: $tborder;
+        border: 1px solid $tborder;
+        cursor: default;
+        &:hover {
+            color: $secondarytxt;
+            background: $tborder;
+            border: 1px solid $tborder;
+        }
+    }
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+textarea {
+    font-family: open_sansregular;    
+}
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+//ACTION BUTTON STYLES & STATES
+.action {
+    text-align:right;
+    //    padding-top: 1rem;
+    button {
+        margin: 0 0 0 0.45rem;
+        font-size: 1.1rem;
+        font-family: open_sansregular;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.cancel {
+            color: $theadbg;
+            background: transparent;
+            border: 1px solid $theadbg;
+            &:hover {
+                background: $btnhov;
+            }
+        }
+        &.btn-primary {
+            //            background: $theadbg;
+            //            border: 1px solid $theadbg;
+            &:hover {
+                //                background: $menunav;
+                //                border: 1px solid $menunav;
+            }
+        }
+    }
+}
+
+//SELECT DROPDOWN STYLES
+.c-select {
+    font-size:1.1667rem;
+    font-family: open_sansregular;
+    color:$primarytxt;
+    padding: 0.5rem 1.75rem 0.5rem 0.75rem;
+    background: url('../assets/icons/Drop_Down.svg') no-repeat right 0.75rem center;
+    background-color: $white;
+    float: none;
+    cursor: pointer;
+    option {
+        cursor: pointer;
+    }
+}
+
+.c-indicator{
+    background-color:#bbb;
+}
+.c-input > input:checked ~ .c-indicator {
+    background-color: $headtxt;
+    outline: none;
+    border: none;
+}
+.bootstrap-select { 
+    font-size:1.1667rem;
+    vertical-align: middle;
+    font-family: open_sansregular;
+    &.open{
+        .dropdown-toggle {
+            border: 1px solid $theadbg;
+        }
+    }
+    .dropdown-toggle {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        .filter-option{
+            vertical-align: middle;
+            font-size: 1.1667rem;
+        }
+    }
+    &.btn-group {
+        .dropdown-menu li a, .dropdown-toggle .filter-option {
+            font-size: 1.1667rem;
+        }
+    }
+}
+
+select {
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    border-radius: 3px;
+    border: 1px solid darken($white, 20%);
+    font-size:1.1667rem;
+    color:$secondarytxt;
+    float: left;
+    -moz-appearance: caret;
+}
+
+//RADIO BUTTON STYLES
+.radio-inline, .radio {
+    vertical-align: top;
+    padding-left: 1.75rem;
+    label {
+        color: $aborder;
+        cursor: pointer;
+        input {
+            &[type="radio"]{
+                cursor: pointer;
+                margin-left: -1.75rem;
+            }
+        }
+    }
+}
+
+//DRAG STYLES
+.draggable-element {
+    cursor: url('../assets/images/grab.cur'), auto;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    &.ui-draggable-dragging {
+        background: $tborder;
+        color: $primarytxt;
+        padding: 0.5rem 0.8rem;
+        border-radius: 3px;
+        cursor: url('../assets/images/grabbing.cur'), auto;
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+        display: table;
+        td {
+            cursor: url('../assets/images/grabbing.cur'), auto;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+            cursor: grabbing;
+        }
+    }
+}
+
+//PROGRESSBAR
+.progress {
+    height: 0.5rem;
+    margin-bottom: 1.2499rem;
+    &[value] {
+        color: $theadbg;
+    }
+}
+
+//SCROLLBAR
+//::-webkit-scrollbar {
+//    width: 4px;
+//    background-color: lighten($theadbg, 37%);
+//}
+//::-webkit-scrollbar-track {
+//    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+//    background-color: lighten($theadbg, 37%);
+//}
+//::-webkit-scrollbar-thumb {
+//    background-color: $theadbg;
+//    outline: 1px solid slategrey;
+//}
+
+//DROPDOWN
+.dropdown-button {
+    background: $white;
+    border: 1px solid darken($white, 20%);
+    width: 20rem;
+    padding: 0rem 1rem;
+    text-transform: none;
+    label{
+        width: 95%;
+        float: left;
+        text-align: left;
+        font-size: 1.125rem;
+        color:$secondarytxt;
+        margin-top: 0.5rem;
+    }
+    &::after {
+        border-width: 0.5rem;
+        margin: 1rem 0;
+        color: darken($secondarytxt, 10%);
+    }
+}
+.dropdown-style {
+    padding:1rem;
+    width: 20rem;
+    padding:0rem;
+    li{ padding:1rem;
+        a{
+            font-size: 1.125rem;
+            color:$secondarytxt;
+        }
+        &:hover{
+            background:darken($white, 11%);
+        }
+    }
+}
+.border-style{
+    border-top: 1px solid darken($white, 20%);
+    @include margin(1.67rem,0,1.67rem,0);
+}
+.icon-back{
+    color:$white;
+}
+.icon-menu ,.icon-menu:hover, .icon-menu:focus{
+    color:$white;
+    outline: none;
+    text-decoration: none;
+}
+.icon-play{
+    margin-top:0.5rem;
+}
+.disabled {
+    i {
+        color: $btn-secondary-border;
+        cursor: default;
+    }
+}
+//TABLE STYLES
+.table-responsive {
+    box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin-bottom: 1rem;
+    table {
+        width: 100%;
+        border-radius: 0;
+        thead,
+        tfoot {
+            background: $theadbg;
+            font-size: 1.1rem;
+            font-family: open_sanssemibold;
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            tr {
+                background: transparent;
+                th {
+                    padding: 0.75rem 1rem 0.75rem 1rem;
+                    text-align: left;
+                    color: $white;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        tbody {
+            tr {
+                background: $white;
+                cursor: pointer;
+                &:nth-child(even) {
+                    background: $troweven;
+                }
+                &:hover {
+                    background: $trowhov;
+                    opacity: 10%;
+                }
+            }
+            td {
+                @include padding(0.6rem, 1rem, 0.6rem, 1rem);
+                font-size: 1.1rem;
+                color: $primarytxt;
+                a{
+                    font-size: 1.1rem;
+                    @include padding(0rem, 0.5rem, 0, 0);
+                    color:$secondarytxt;                    
+                    &:hover {
+                        color:$headtxt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.space{
+    padding-top: 0.5rem;
+}
+
+//TABLE CLONE ELEMENT - Sortable helper
+.ui-sortable-helper {
+    display: table;
+}
+//POPOVER STYLES
+.popover {
+    font-family: open_sansregular;
+    font-size:1rem;
+    width: 330px;
+    max-width: 330px;
+    margin-bottom:1rem;
+    .popover-title{
+        display: none;
+    }
+    .popover-text{
+        span{
+            font-family: open_sanssemibold;
+            font-style: italic;
+        }
+    }
+}
+
+//LOADER STYLES
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1); }
+
+    50% {
+        -webkit-transform: rotate(180deg) scale(0.6);
+        transform: rotate(180deg) scale(0.6); }
+
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1); }
+}
+
+.ball-clip-rotate {
+    text-align: center;
+    & > div {
+        border-radius: 100%;
+        margin: 2px;
+        border: 3px solid $theadbg;
+        border-bottom-color: transparent;
+        height: 35px;
+        width: 35px;
+        background: 0 0!important;
+        display: inline-block;
+        -webkit-animation: rotate .75s 0s linear infinite;
+        animation: rotate .75s 0s linear infinite;
+    }
+}
+
+//EXPRESSION BUILDER AND PREVIEW POPUP SIZE
+#expressionBuilder, #newTargetField {
+    .modal-dialog {
+        min-width: 50%;
+    }   
+}
+
+//TASK MANAGER - TASK MAPPING PREVIEW POPUP SIZE
+#taskPreview {
+    .modal-dialog {
+        min-width: 80%;
+    }       
+}
+.k-list{
+    .k-state-selected.k-state-focused {
+        color: #00a2eb;
+    }
+}
+
+//PROGRESS BAR STYLES
+#progressbar {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    margin: .6em 0;
+    clear: both;
+}
+
+#progress {
+    background: $menunav; /*-- Color of the bar --*/
+    height: 8px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+    -webkit-animation: progress 5s 1 forwards;
+    -moz-animation: progress 5s 1 forwards;
+    -ms-animation: progress 5s 1 forwards;
+    animation: progress 5s 1 forwards;
+}
+
+#pbaranim {
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    background: url('../assets/images/progress.gif') repeat-x;
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+}
+
+@-webkit-keyframes progress {
+    from { }
+
+    to { width: 100% }
+}
+
+@-moz-keyframes progress {
+    from { }
+
+    to { width: 100% }
+}
+
+@-ms-keyframes progress {
+    from { }
+
+    to { width: 100% }
+}
+
+@keyframes progress {
+    from { }
+
+    to { width: 100% }
+}
+
+// CALENDAR UI CHANGES
+.k-calendar {
+    .k-header {
+        background-color: $theadbg;
+        .k-state-hover {
+            background-color: $menunav;
+        }
+    }
+    .k-today {
+        background-color: $menunav;
+    }
+}

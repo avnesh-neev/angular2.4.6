@@ -1,0 +1,148 @@
+.parameter {
+    .parameter-content {
+        padding: 1.667rem;
+        .parameter-title {
+            @include padding(0rem, 0rem, 1.6rem, 0rem);
+            p{
+                font-size: 1.1667rem;
+                color:$primarytxt;
+                margin-bottom:0rem;
+                span{
+					font-size: 1.334rem;
+                    text-transform: uppercase;
+                    color:$titleColor;
+					font-family: open_sanssemibold;
+                }
+            }
+        }
+        .parameters-connection {
+            @include padding(0.7rem, 1rem, 1rem, 1.25rem);
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+            img {
+                width: 20px;
+            }
+        }
+        .table-responsive {
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            margin-bottom: 1rem;
+            table { 
+                width: 100%;
+                border-radius: 0;
+                box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+                thead,
+                tfoot {
+                    background: $theadbg;
+                    font-size: 1.25rem;
+                    font-family: open_sanssemibold;
+                    tr {
+                        background: transparent;
+                        th {
+                            @include padding(1rem, 1rem, 1rem, 1rem);
+                            text-align: left;
+                            color: $white;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        background: $white;
+                        &:nth-child(even) {
+                            background: $troweven;
+                        }
+                        &:hover {
+                            background: $trowhov;
+                        }
+
+                        td{
+							color:$primarytxt;
+                            &.dnd-drag-start {
+                                border: 1px dashed #ccc;
+                            }
+                            img {
+                                width:2rem;
+                            }
+                            &.src-dimension-entity{
+                                background-image: url(../assets/icons/Cirle_Green_1x.svg);
+                                background-repeat: no-repeat;
+                                background-position: right 1rem center;
+                                padding-right: 1rem;
+                            }
+                            .parameter-data{
+                                span{
+                                    @extend .fl;
+                                }
+                                .parameter-data-icon{
+                                    @extend .fr;
+                                    a{
+                                        font-size: 1.1rem;
+                                        @include padding(0rem, 0.5rem, 0, 0);
+                                        color:$secondarytxt;
+                                    }
+                                }
+                            }
+                            &.parameter-dragable-content-area {
+                                border-top: 1px solid $tborder;
+                                padding: 0.5rem 1rem;
+                                text-align: center;
+                                background: $troweven;
+                                p {
+                                    margin: 0;
+                                    padding: 0.25rem;
+                                    border: 1px dashed $tborder;
+                                    color: $tborder;
+                                }
+                            }
+                        }
+                        .entity-demension{
+                            color:$theadbg;
+                            font-size: 1.05rem;
+                        }
+                        &.dnd-drag-over {
+                            .parameter-dragable-content-area {
+                                // p {
+                                // color: $white;
+                                border: 1px solid $theadbg;
+                                // background: $white;
+                                // }
+                            }
+                        }
+                    }
+                    .tractive{
+                        background: $trowhov;
+                    }
+                }
+            }
+        }
+    }
+    .parameter-popup {
+        p {
+            padding:0;
+            margin-bottom: 0.2rem;
+            color:$aborder;
+            overflow: auto;
+        }
+        .table-responsive {
+            @include margin(0, 0, 1rem, 0);
+            border: 1px solid $tborder;
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            height: 350px;
+            overflow: auto;
+            table {
+                margin-bottom: 0;
+                tr{
+                    th{
+                        @include  padding(0.85rem, 1rem,0.9rem ,1rem);
+                    }
+                    td {
+                        @include  padding(0.45rem, 1rem,0.35rem ,1rem);
+                        color:$primarytxt;
+                        font-family: open_sansregular;
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+    }
+}

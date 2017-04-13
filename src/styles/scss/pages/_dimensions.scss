@@ -1,0 +1,57 @@
+.dimensions{
+    .header {
+        @include padding(0, 1.667rem, 0, 1.667rem);
+        .page-title {
+            font-family: open_sanssemibold;
+            color: $titleColor;
+            font-size: 1.334rem;
+            @include margin(1rem, 0, 1rem, 0);
+            text-transform: uppercase;
+        }
+        .search{
+            @extend .fr;
+            position: relative;
+            margin: 0.5rem 0 0;
+            .srch_ipt{
+                border: none;
+                border-bottom: 1px solid darken($white, 20%);
+                width: 20rem;
+                border-radius: 0;
+                padding-left: 0.5rem;
+                outline: none;
+                &:focus {
+                    border-bottom: 1px solid $theadbg;
+                }
+            }
+            .search-ico{
+                @extend .fr;
+                padding-top: 0.5rem;
+                margin-right: 0rem;
+                position: absolute;
+                top:0;
+                right: 0;
+                color:$primarytxt;
+                font-size: 1.33rem;
+            }
+        }
+    }
+    .dimensions-content{
+        margin: 1.667rem;
+        .table-responsive {
+            max-height: 76vh;
+            overflow: auto;
+            table {
+                tbody {
+                    td {
+                        &:first-child {
+                            max-width: 10vw;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

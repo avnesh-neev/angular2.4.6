@@ -1,0 +1,151 @@
+//COMMON STYLES
+.menunav {
+    background: $theadbg;
+    width: 100%;
+    @include padding(0rem, 1.2rem, 0rem, 0rem);
+    .logo
+    {
+        @extend .fl;
+    }
+    .logo-head {
+        //      font-family: open_sanssemibold;
+        color: $white;
+        font-size: 1.5rem;
+        @include margin(0rem, 0rem, 0rem, 0rem);
+        @include padding(1.3rem, 0rem, 1.1rem, 1.667rem);
+        //        line-height: 2.5rem;
+        text-transform: uppercase;
+        @extend .fl;
+    }
+    .header-title{
+        width: 250px;
+        color: $white;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        background-color: $menunav;
+        padding:1.42rem 1.42rem 1.42rem 1.9rem;
+        @extend .fl;
+        font-family: open_sanssemibold;
+    }
+    .search{
+        @include padding(1.1rem, 0rem, 1.1rem, 0rem);
+        width: 20rem;
+        position: relative;
+        @extend .fr;
+        .search-box {
+            position: absolute;
+            background: $white;
+            list-style: none;
+            width: 90%;
+            margin-left: 10%;
+            top: 5.5rem;
+            z-index: 1;
+            padding:0;
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            li {
+                color: darken($white,67.1%);
+                padding: 1rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover{
+                    background: $trowhov;
+                }
+            }
+        }
+    }
+    .search-icon {
+        @include margin(0.5rem, 0rem, 0rem, 0rem);
+        padding-left: 5rem;
+        padding-top: 1rem;
+    }
+    .search-ico {
+        float: right;
+    }
+    .srch_ipt {
+        border: none;
+        float: right;
+        border-bottom: 1px solid $white;
+        display: block;
+        font-size: 1.2rem;
+        font-family: open_sans;
+        margin: 0;
+        padding: 4px 0;
+        background: 0 0;
+        text-align: left;
+        color: $white;
+        width: 0;
+        transition: width 0.2s;
+        outline: none;
+    }
+    .srch_inpt_toggle {
+        width: 200px;
+        transition: width 0.2s;
+    }
+    .user-box {
+        height: 3rem;
+        @extend .fr;
+        @include margin(1rem, 0rem, 1rem, 0rem);
+
+        img {
+            border-radius: 4px;
+        }
+        .downarrow {
+            background-image: url(../assets/icons/Arrow_Down_1x.svg);
+            display: inline-block;
+            height: 16px;
+            width: 26px;
+            background-size: 100%;
+        }
+    }
+    .dropdown {
+        float: right;
+        .more-btn {
+            margin: 1.1rem 0 1.1rem 0;
+            display: inline-block;
+            font-size:1.5rem;
+            color:$white;
+            cursor: pointer;
+        }
+        .dropdown-toggle {
+            &::after{
+                content: none;
+            }
+        }
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.about-popup {
+    color: $primarytxt;
+    h4 {
+        margin: 0 0 1rem;
+        small {
+            font-size: 1rem;
+        }
+    }
+    p {
+        margin: 0;
+        strong {
+            width: 13.15rem;
+            text-align: right;
+            display: inline-block;
+            font-family: open_sansregular;
+        }
+    }
+    .img {
+        height: 7.5rem;
+        text-align: center;
+        white-space: nowrap;
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        img {
+            max-width: 75%;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+//CONNECTORS
+.authentication {
+	.authentication-content {
+		padding: 1.667rem;
+		.sub-header {
+			@include padding(0rem, 0rem, 1.6rem, 0rem);
+			text-align: center;
+			color: $secondarytxt;
+			border-bottom: 1px solid darken($white, 20%);
+		}
+		.upload-file {
+			font-size: 1.5rem;
+			text-align: center;
+			img {
+				float: left;
+				height: 1.5rem;
+			}
+			label {
+				color: $theadbg;
+				input {
+					display: none;
+				}
+			}
+		}
+		.upload-drop-zone {
+			margin-top: 2rem;
+			padding: 1rem 0 5rem;
+			color: darken($white, 20%);
+			border-style: dashed;
+			border-color: darken($white, 20%);
+			border-width: 2px;
+			@include border-radius($border-radius);
+			.drop-files {
+				text-align: left;
+				border-bottom: 1px solid darken($white, 20%);
+				padding: 1rem 0;
+				p {
+					margin-bottom: 0.25rem;
+					color: $primarytxt;
+					font-size: 1.2rem;
+				}
+				.progress {
+					height: 0.8rem;
+					margin: 0.5rem 0 0;
+				}
+				i {
+					font-size: 1.2rem;
+					padding: 0 0.3rem 0 0;
+					cursor: pointer;
+					color: $primarytxt;
+					&.icon-cancel {
+						color: darken(red, 10%);
+						vertical-align: super;
+						padding-left: 0.5rem;
+						font-size: 1.3rem;
+					}
+					&.icon-check {
+						color: green;
+						vertical-align: super;
+						padding-left: 0.5rem;
+						font-size: 1.3rem;
+					}
+				}
+				img {
+					width: 1.15em;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+}
+
+.settings-popup {
+	.c-select {
+		margin-bottom: 1.2499rem;
+		width: 30rem;
+	}
+}

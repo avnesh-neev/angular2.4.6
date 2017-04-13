@@ -1,0 +1,30 @@
+{
+  "marketplace": {
+    "apiary": {
+      "baseUrl": "https://private-e4e53-bi360.apiary-mock.com/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": false
+    },
+    "dagger": {
+      "baseUrl": "https://dagger.solverusa.com/dwmapi/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": true
+    },
+    "local": {
+      "baseUrl": "http://localhost:2032/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": false
+    }
+  },
+  "dataWarehouse": {
+    "apiary": {
+      "baseUrl": "https://private-e4e53-bi360.apiary-mock.com/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": false
+    },
+    "dagger": {
+      "baseUrl": "https://dagger.solverusa.com/dwmapi/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": true
+    },
+    "local": {
+      "baseUrl": "http://localhost:2032/dw/3d3f7768-0fc1-4110-ae14-b3ffcb26322a/",
+      "requiresAuthentication": false
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.steps-header {
+    @include padding(0rem, 1.667rem, 0rem, 0.9375rem);
+//    background: $header;
+	background: $white;
+	box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    .back {
+        padding: 1.2rem 1.5rem;
+        background-color: $backbtnclr;
+        font-size: 1.3rem;
+        @extend .fl;
+        .back-svg {
+            background-color: $white;
+            -webkit-mask-image: url("../assets/icons/Back.svg");
+            -moz-mask-image: url("../assets/icons/Back.svg");
+            mask-image: url("../assets/icons/Back.svg");
+            height: 1.35rem;
+            width: 1.35rem;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: calc(100% - 52px);
+        float: left;
+        position: relative;
+        li {
+            @include margin(1.25rem, 0, 1.25rem, 0);
+            text-align: center;
+            white-space: nowrap;
+            font-size: 1.25rem;
+            i {
+                color: $aborder;
+                background: $white;
+                padding: 0rem 0.5rem 0 1rem;
+                margin-right: -0.5rem;
+                font-size: 1.19rem;
+                &.disabled {
+                    cursor: default;
+                }
+            }
+            span {
+                background: $white;
+                display: inline-block;
+                font-family: open_sansregular;
+                color: $aborder;
+                text-transform: uppercase;
+                padding: 0 1rem 0 0.5rem;
+                cursor: pointer;
+                &.step-header{
+                    color:$headtxt;
+                    font-family: open_sanssemibold;
+                }
+                &.disabled {
+                    cursor: default;
+                }
+            }
+            &.router-link-active {
+                span, i {
+                    font-family: open_sanssemibold;
+                    color: $theadbg;
+                }
+            }
+            &.active-component {
+                span, i {
+                    font-family: open_sanssemibold;
+                    color: $theadbg;
+                }
+            }
+            &:first-child {
+                text-align: left;
+                padding-left: 0;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 0;
+            }
+            .active-task-title {
+                color: $theadbg;
+                font-family: open_sanssemibold;
+            }
+            &:hover {
+                i, span {
+                    color: $theadbg;
+                }
+            }
+            &.disabled {
+                cursor: default;
+                &:hover {
+                    i, span {
+                        color: $aborder;
+                    }
+                }
+            }
+        }
+        &::before {
+            content: "";
+            background: lighten($aborder,55%);
+            position: absolute;
+            top: 26px;
+            width: 90%;
+            margin: 0 auto;
+            height: 1px;
+            left: 5%;
+        }
+    }
+}

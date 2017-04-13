@@ -1,0 +1,130 @@
+.adminmodules {
+    .header-box {
+        @include padding(1.667rem, 1.667rem, 1.667rem, 1.667rem);
+        .header-box-content {
+            @include padding(0rem, 1.667rem, 0rem, 1.667rem);
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            width: 30rem;
+            background: $white;
+            @extend .fl;
+            @include margin(0, 1rem, 0, 1rem);
+            p {
+                margin-bottom: 0.3rem;
+                .num1 {
+                    font-size: 3.5rem;
+                    color: #12b5fe;
+                    font-family: open_sansregular;
+                    vertical-align: sub;
+                }
+                .num2 {
+                    font-size: 1.35rem;
+                    color: darken($white, 15%);
+                    font-family: open_sansregular;
+                    text-transform: none;
+                    vertical-align: super;
+                    margin-left: 0.2rem;
+                }
+                .text {
+                    font-size: 1.35rem;
+                    color: $primarytxt;
+                    text-transform: uppercase;
+                    margin-bottom: 0rem;
+                    font-family: open_sanssemibold;
+                    vertical-align: super;
+                    margin-left: 0.2rem;
+                }
+            }
+        }
+        .help {
+            @extend .fl;
+            font-size: 1.1667rem;
+            color: $primarytxt;
+            text-transform: uppercase;
+            padding-top: 2rem;
+            padding-left: 0rem;
+            a {
+                color: $primarytxt;
+                &:hover {
+                    color: $headtxt;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .header {
+        @include padding(0.5rem, 1.667rem, 0.5rem, 0rem);
+        .actions {
+            padding-top: 0.65rem;
+            margin-left: 10px;
+            a {
+                color: $primarytxt;
+                cursor: pointer;
+                padding: 0 0.75rem 0 0.85rem;
+                display: inline-block;
+                font-size: 1.2rem;
+                border-left: 1px solid #ccc;
+                &:first-child {
+                    border-left: none;
+                }
+                &:hover {
+                    color: $headtxt;
+                }
+            }
+        }
+        .search {
+            @extend .fr;
+            position: relative;
+            margin: 0.2rem 0 0 0;
+            .srch_ipt {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid darken($white, 20%);
+                width: 20rem;
+                border-radius: 0;
+                padding-left: 0.5rem;
+                outline: none;
+                &:focus {
+                    border-bottom: 1px solid $theadbg;
+                }
+            }
+            .search-ico {
+                @extend .fr;
+                padding-top: 0.5rem;
+                margin-right: 0rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: $primarytxt;
+                font-size: 1.33rem;
+            }
+        }
+    }
+    .adminmodules-content {
+        margin: 1.667rem;
+        //CUSTOMIZING KENDO UI STYLES
+        .header2 {
+            padding-right: 1rem;
+            .actions {
+                padding: 0rem 0 1.5rem 0;
+                margin-left: -9px;
+                i {
+                    font-size: 1.2rem;
+                }
+                a {
+                    color: $primarytxt;
+                    cursor: pointer;
+                    padding: 0 0.65rem;
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    border-left: 1px solid #ccc;
+                    &:first-child {
+                        border-left: none;
+                    }
+                    &:hover {
+                        color: $headtxt;
+                    }
+                }
+            }
+        }
+    }
+}

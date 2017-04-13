@@ -1,0 +1,97 @@
+//Market place - installed applications-toggle styles
+.toggle-installed {
+	padding: 0;
+	@extend .fr;
+	.toggle-title {
+		@extend .fl;
+		@include padding (0rem,1rem,0rem,2rem);
+		@include margin (-0.05rem,0rem,0rem,0rem);
+		font-family: open_sanssemibold;
+		font-size: 1.1667rem;
+		color: $aborder;
+	}
+	.cmn-toggle {
+		position: absolute;
+		visibility: hidden;
+	}
+	.cmn-toggle + label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	input.cmn-toggle-round + label {
+		padding: 2px;
+		width: 45px;
+		height: 25px;
+		background-color: $white;		
+		@extend .fr;
+		border-radius:3px;
+		text-align: center;
+	}
+	input.cmn-toggle-round + label:before,
+	input.cmn-toggle-round + label:after {
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		content: "";
+	}
+	input.cmn-toggle-round:checked + label:before {
+		background-color:$white;
+		color:$headtxt;
+		border:1px solid $headtxt;
+		border-radius:3px;
+		right: 0px;
+		-webkit-transition: background 0.4s;
+		-moz-transition: background 0.4s;
+		-o-transition: background 0.4s;
+		transition: background 0.4s;
+	}
+
+	input.cmn-toggle-round:checked + label:after {
+		margin-left: 0px;
+		width: 35px;
+		background-color: $headtxt;
+		color:$white;
+		padding-top: 3px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		//		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		//		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		//		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		-webkit-transition: margin 0.4s;
+		-moz-transition: margin 0.4s;
+		-o-transition: margin 0.4s;
+		transition: margin 0.4s;
+		content: "On";
+	}
+
+	input.cmn-toggle-round + label:before {
+		background-color: $white;
+		width:45px;
+		border:1px solid darken($white,20%);
+		border-radius:3px;
+	}
+	input.cmn-toggle-round + label:after {
+		padding: 3px 5px ;
+		width: 35px;
+        margin-left: 9px;
+		content: "Off";
+		background-color: $tborder;
+		color:$titleColor;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		-webkit-transition: margin 0.4s;
+		-moz-transition: margin 0.4s;
+		-o-transition: margin 0.4s;
+		transition: margin 0.4s;
+	}
+}

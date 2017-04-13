@@ -1,0 +1,157 @@
+.admincreatedimension{
+	.header {
+		@include padding(0.2rem, 1.667rem, 0rem, 0rem);
+		//        background: $header;
+		.back {
+			padding: 1.1rem 1.5rem 1.1rem;
+			background-color: $backbtnclr;
+			font-size: 1.3rem;          
+		}
+		.page-title {
+			font-family: open_sansregular;
+			color: $titleColor;
+			font-size: 1.334rem;
+			display: inline-block;
+			@include padding(0.8rem, 0, 0rem, 1rem);
+		}
+	}
+
+	.admincreatedimension-content {
+		padding: 0 0.9375rem;
+		.top-header{
+			.dimension-name {
+				margin: 1.667rem 0.7295rem 0;
+				display: inline-block;
+				label {
+					width: 12rem;
+					color: $aborder;
+					font-size: 1.1667rem;
+					font-family: open_sanssemibold;
+				}
+				.dimension-input {
+					display: inline-block;
+					input[type="text"] {
+						width: 20rem;
+						padding: 0.5rem 1rem;
+						border-radius: 3px;
+						font-size: 1.1667rem;
+						color: $secondarytxt;
+						font-family: open_sansregular;
+					}
+					button {
+						font-size: 1.1667rem;
+						vertical-align: top;
+						margin-left: 1.667rem;
+						padding: 0.45rem 1rem;
+					}
+				}
+			}
+			.toggle-installed {            
+				margin: 2.15rem 0.7295rem 0;
+			}
+		}
+		.admincreatedimension-content-area {
+			margin: 1.667rem 0.7295rem;
+			padding: 1.667rem;
+			box-shadow:  2px 0px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			background: $white;
+			.title {
+				padding-top: 0rem;
+				padding-right: 0rem;
+				padding-bottom: 0rem;
+				padding-left: 0rem;
+				font-size: 1.25rem;
+				color: #474747;
+				text-transform: uppercase;
+				font-family: open_sanssemibold;
+			}
+			.actions {
+				padding-top:0.4rem;
+				float: right;
+				a{
+					color:$primarytxt;
+					cursor: pointer;
+					padding: 0 0.75rem 0 0.85rem;
+					display: inline-block;
+					font-size:1.2rem;
+					border-left: 1px solid #ccc;
+					&:first-child {
+						border-left: none;
+					}			
+					&:hover {
+						color:$headtxt;
+					}
+				}
+			}
+			.table-responsive {
+				box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+				overflow: hidden;
+				table {
+					//				min-width: 1018px;
+					width: 100%;
+					border-radius: 0;
+					box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+					thead,
+					tfoot {
+						background: $theadbg;
+						font-size: 1.25rem;
+						font-family: open_sanssemibold;
+						tr {
+							background: transparent;
+							th {
+								text-align: left;
+								color: $white;
+								border-bottom: none;
+								i {
+									float: right;
+									font-size: 1.33rem;
+									cursor: pointer;
+									margin-top:0.29rem;
+									&:hover {
+										//										color: $theadbg;
+										//										background: $white;
+									}
+								}
+							}
+						}
+					}
+					tbody {
+						tr {
+							background: $white;
+							cursor: pointer;
+							&:nth-child(even) {
+								background: $troweven;
+							}
+							&:hover {
+								background: $trowhov;
+							}
+							td{
+								border-right: 1px solid darken($white,10%);
+								&.fieldname-width{
+									width:20rem;
+								}
+							}
+							.status{
+								span {
+									height: 12px;
+									width: 12px;
+									display: inline-block;
+									background-size: 100%;
+									@include margin(0, 0.5rem, 0, 0);
+
+									&.success {
+										background-image: url(../assets/icons/Cirle_Green_1x.svg);
+									}
+
+								}
+							}
+						}
+					}
+					.tractive{
+						background: $trowhov;
+					}
+				}
+			}
+		}
+	}
+}

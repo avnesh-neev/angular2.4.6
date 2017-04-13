@@ -1,0 +1,128 @@
+.authentication {
+    padding: 1.667rem;
+    .authentication-form {
+        padding: 1.667rem;
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        h3 {
+            text-transform: uppercase;
+            color: $titleColor;
+            font-size: 1.334rem;
+            font-family: open_sanssemibold;
+            margin-bottom: 1.2rem;
+        }
+        form {
+            .form-field {
+                margin-bottom: 1rem;
+                label {
+                    font-size: 1.1667rem;
+                    color: $primarytxt;
+                    margin-top: 0.5rem;
+                    min-width: 12rem;
+                    font-family: open_sanssemibold;
+                    text-transform: capitalize;
+                }
+                .form-input {
+                    width: 37rem;
+                    font-size: 1.1667rem;
+                    font-family: open_sansregular;
+                    padding: 0.5rem 1rem;
+                    border-radius: 3px;
+                    display: inline-block;
+                    background-image: none;
+                    border: 1px solid #ccc;
+                }
+            }
+            .form-select {
+                margin-bottom: 1rem;
+                label {
+                    font-size: 1.1667rem;
+                    color: $primarytxt;
+                    margin-top: 0.5rem;
+                    min-width: 12rem;
+                    font-family: open_sanssemibold;
+                    text-transform: capitalize;
+                }
+                .c-select {
+                    width: 37rem;
+                }
+            }
+            .error-msg {
+                font-size: 1.1667rem;
+                font-family: open_sansregular;
+                color: #D8000C;
+            }
+            .auth-loader {
+                font-size: 1.1667rem;
+                font-family: open_sansregular;
+                .loader-inner {
+                    display: inline-block;
+                }
+                @-webkit-keyframes scale {
+                    0% {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    45% {
+                        -webkit-transform: scale(0.1);
+                        transform: scale(0.1);
+                        opacity: 0.7;
+                    }
+                    80% {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+                @keyframes scale {
+                    0% {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    45% {
+                        -webkit-transform: scale(0.1);
+                        transform: scale(0.1);
+                        opacity: 0.7;
+                    }
+                    80% {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+                .ball-pulse > div:nth-child(1) {
+                    -webkit-animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                    animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                }
+                .ball-pulse > div:nth-child(2) {
+                    -webkit-animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                    animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                }
+                .ball-pulse > div:nth-child(3) {
+                    -webkit-animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                    animation: scale 0.75s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+                }
+                .ball-pulse > div {
+                    background-color: $theadbg;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 100%;
+                    margin: 3px 0 0;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                    display: inline-block;
+                }
+            }
+            .action {
+                .disabled {
+                    background-color: #cfcfcf;
+                    border: 1px solid #cfcfcf;
+                    color: #9d9d9d;
+                }
+            }
+        }
+    }
+}

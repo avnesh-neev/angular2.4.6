@@ -1,0 +1,162 @@
+.members {
+	.header {
+		@include padding(0rem, 1.667rem, 0rem, 0rem);
+		//        background: $header;
+		.back {
+			padding: 1.3rem 1.5rem 1.1rem;
+			background-color: $backbtnclr;
+			font-size: 1.3rem;          
+		}
+		.page-title {
+			font-family: open_sanssemibold;
+			color: $titleColor;
+			font-size: 1.334rem;
+			display: inline-block;
+			@include margin(1rem, 0, 1rem, 1rem);
+			span {
+				color: $primarytxt;
+				font-family: open_sansregular;
+				font-size: 1.1667rem;
+			}
+		}
+		.search{
+			@extend .fr;
+			position: relative;
+			margin: 0.5rem 0 0;
+			.srch_ipt{
+				border: none;
+				border-bottom: 1px solid darken($white, 20%);
+				width: 20rem;
+				border-radius: 0;
+				padding-left: 0.5rem;
+				outline: none;
+				&:focus {
+					border-bottom: 1px solid $theadbg;
+				}
+			}
+			.search-ico{
+				@extend .fr;
+				padding-top: 0.5rem;
+				margin-right: 0rem;
+				position: absolute;
+				top:0;
+				right: 0;
+				color:$primarytxt;
+				font-size: 1.33rem;
+			}
+		}
+	}
+	.members-content{
+		padding: 1.25rem 1.667rem 0 1.667rem;
+		.actions {
+			padding:0rem 0 1.5rem 0;
+			margin-left: -9px;
+			a{
+				color:$primarytxt;
+				cursor: pointer;
+				display: inline-block;
+				font-size:1.2rem;
+				border-left: 1px solid #ccc;
+				&:first-child {
+					border-left: none;
+				}
+				i{
+					padding:0 0.6rem 0 0.8rem;
+					&.icon-add{
+						margin-right:0.15rem;
+					}
+					&.icon-export{
+						margin-left: 0.2rem;
+					}
+					&.icon-delete{
+						margin-left: 0.1rem;
+					}
+				}
+				&:hover {
+					color:$headtxt;
+				}
+			}
+			.action{
+				@extend .fr;
+				margin-top: -0.25rem;
+			}
+		}
+        .membersGrid {
+            table {
+                min-width: 100vw;
+            }
+        }
+		.k-grid-content{
+			table{
+				font-family: open_sansregular;
+				tr{
+					td{
+//						border-right:1px solid #ccc;
+//						padding: .5rem 1rem;
+						font-family: open_sansregular;
+						font-size: 1.1rem;
+                        white-space: nowrap;
+                        width: auto;
+                        overflow: hidden;
+                        text-overflow: initial;
+						.checkbox{
+							margin-bottom: 0rem;
+						}
+						&.k-edit-cell {
+							padding: 0.2rem;
+							background: $white;
+							border: 2px solid $theadbg;
+							input {
+								&.k-textbox{
+									border-radius: 0;
+									text-indent: 0;
+									height: auto;
+									padding: 0;
+									padding-left: 1rem;
+									padding-right: 0.8rem;
+									box-shadow: none;
+									border: none;
+								}
+							}
+							.k-dropdown {
+								.k-state-default {
+									background-color: $white;
+									border: none;
+								}
+								.k-state-focused {
+									box-shadow: none;
+								}
+								.k-icon {
+									opacity: 1;
+									background-position: 0 -32px;
+								}
+							}
+						}
+						&.k-dirty-cell {
+							.k-dirty {
+								//background-color: red;
+								//margin: 0;
+								//width: 0.6rem;
+								//height: 0.6rem;
+								//margin-left: -0.25rem;
+								//margin-top: -0.25rem;
+								//border: none;
+								//border-radius: 0.3rem;
+								display: none;
+							}
+							border-bottom: 2px solid $drafttxt;
+						}
+					}
+					&.k-state-selected {
+						td {
+							box-shadow: none;
+							&.k-state-focused {
+								box-shadow: inset 0 0 6px 0 $buttonhover;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

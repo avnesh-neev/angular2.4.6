@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+	 style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#909090;}
+</style>
+<title>Shape</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Configured-Connectors_1.1" transform="translate(-1514.000000, -382.000000)" sketch:type="MSArtboardGroup">
+		<g id="Table" transform="translate(24.000000, 208.000000)" sketch:type="MSLayerGroup">
+			<g id="Copy-Icon" transform="translate(1488.000000, 173.000000)" sketch:type="MSShapeGroup">
+				<g id="Group">
+					<path id="Shape" class="st0" d="M18.5,2h-12c-1.1,0-2,0.9-2,2v14h2V4h12V2L18.5,2z M21.5,6h-11c-1.1,0-2,0.9-2,2v14
+						c0,1.1,0.9,2,2,2h11c1.1,0,2-0.9,2-2V8C23.5,6.9,22.6,6,21.5,6L21.5,6z M21.5,22h-11V8h11V22L21.5,22z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

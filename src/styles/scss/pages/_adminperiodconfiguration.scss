@@ -1,0 +1,230 @@
+.adminperiodconfiguration {
+    .header {
+        @include padding(0.8rem, 1.667rem, 0.5rem, 0rem);
+        .calendar {
+            @include padding(0rem, 1.667rem, 0rem, 1.667rem);
+            p {
+                font-family: open_sanssemibold;
+                @extend .fl;
+                font-size: 1.1667rem;
+                padding-right: 1rem;
+                padding-top: 0.5rem;
+            }
+            .start-date {
+                @extend .fl;
+                width: 21rem;
+                position: relative;
+                cursor: pointer;
+                .k-header {
+                    border: 1px solid #ccc;
+                    box-shadow: none;
+                    border-radius: 0.3rem;
+                }
+                .k-datepicker {
+                    background-color: $white;
+                    .k-state-default {
+                        background-color: $white;
+                        border: none;
+                        input {
+                            background-color: $white;
+                            border: none;
+                        }
+                        .k-select {
+                            border: none;
+                        }
+                    }
+                    .k-state-hover,
+                    .k-state-focused {
+                        border: none;
+                        box-shadow: none;
+                        background-color: $white;
+                    }
+                }
+            }
+            .calendar-type {
+                width: 23rem;
+                @extend .fl;
+                .type-select {
+                    width: 12rem;
+                    padding: 0.45rem 1.75rem 0.4rem 0.75rem;
+                }
+            }
+            .periods-in-year {
+                width: 16rem;
+                @extend .fl;
+                .periods {
+                    width: 5rem;
+                    padding: 0.55rem;
+                    border-radius: 0.3rem;
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+        .advanced-option {
+            font-size: 1.1667rem;
+            font-family: open_sanssemibold;
+            color: $primarytxt;
+            @extend .fr;
+            border-left: 2px solid darken($white, 20%);
+            padding-left: 1rem;
+            margin-top: 0.6rem;
+            cursor: pointer;
+            text-transform: capitalize;
+            i {
+                display: inline-block;
+                color: $theadbg;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            &.collapsed {
+                i {
+                    color: $primarytxt;
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+    .advanced-option-collapse {
+        .card-block {
+            border-left: none;
+            border-radius: none;
+            border-radius: 0;
+            font-size: 1.1667rem;
+            color: $primarytxt;
+            .card-row {
+                margin-bottom: 1rem;
+                .collapse-dropdown {
+                    @extend .fl;
+                    .dropdown-label {
+                        color: $primarytxt;
+                        font-family: open_sanssemibold;
+                        width: 14rem;
+                    }
+                    .type-select {
+                        width: 20rem;
+                    }
+                }
+                .collapse-input {
+                    @extend .fl;
+                    .input-label {
+                        padding-left: 1.667rem;
+                        font-family: open_sanssemibold;
+                        width: 10rem;
+                    }
+                    .col-input {
+                        border: 1px solid #ccc;
+                        width: 7rem;
+                    }
+                    .example {
+                        font-size: 1rem;
+                        font-style: italic;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .adminperiodconfiguration-content {
+        padding: 1.667rem;
+        .preview {
+            margin-bottom: 1.667rem;
+            button {
+                @extend .fl;
+            }
+            .add-years {
+                @extend .fl;
+                margin-left: 1rem;
+                .c-select {
+                    padding: 0.3rem 2rem 0.3rem 1rem;
+                }
+            }
+        }
+        .adminperiodconfiguration-content-area {
+            background: $white;
+            padding: 1.667rem;
+            border-radius: 3px;
+            box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            .preview-head{
+                text-align: center;
+                font-size: 1.1667rem;
+                font-family: open_sansregular;
+                color: $primarytxt;
+                margin-bottom: 0rem;
+                span {
+                    font-family: open_sanssemibold;
+                }
+            }
+            .preview-period {
+                .preview-years{
+                    margin-bottom: 1rem;
+                    span{
+                        border-right: 1px solid $aborder;
+                        @include padding(0rem,1rem,0rem,1rem);
+                        cursor: pointer;
+                        color:$primarytxt;
+                        &.selected-year{
+                            font-family: open_sanssemibold;
+                        }
+                        &:nth-last-child(1) {
+                            border-right: none;
+                        }
+                        &:first-child {
+                            padding-left: 0;
+                        }
+                    }
+                }
+                .table-responsive{
+                    tbody{
+                        tr{
+                            background-color: $white;
+                            border-bottom: 1px solid $tborder;
+                            &:hover{
+                                background-color:$white;
+                            }
+                        }
+                    }
+                    .k-datepicker {
+                        background-color: $white;
+                        .k-state-default {
+                            background-color: $white;
+                            border: none;
+                            input {
+                                background-color: $white;
+                                border: none;
+                            }
+                            .k-select {
+                                border: none;
+                            }
+                        }
+                        .k-state-hover,
+                        .k-state-focused {
+                            border: none;
+                            box-shadow: none;
+                            background-color: none;
+                        }
+                    }
+                }
+            }
+        }
+        .action{
+            padding-top:1.667rem;
+            .reset{
+                background-color:$troweven;
+                color:$secondarytxt;
+                border: none;
+            }
+            .disabled{
+                background-color:$tborder;
+                color:$secondarytxt;
+                border: 1px solid $tborder;
+            }
+        }
+    }
+}

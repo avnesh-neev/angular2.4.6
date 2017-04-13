@@ -1,0 +1,149 @@
+//RULES
+.rules {
+	.header {
+		@include padding(0.5rem, 1.667rem, 0.5rem, 1.667rem);
+		//		background: $header;
+		.page-title {
+			font-family: open_sanssemibold;
+			color: $titleColor;
+			font-size: 1.334rem;
+			@include margin(0.6rem, 0, 0.6rem, 0);
+			span {
+				color: $primarytxt;
+				padding-left: 0.6rem;
+				font-family: open_sansregular;
+				font-size:1.1667rem;
+			}
+		}
+		.header-config-rules-icons {
+			@include margin(0.8rem, 0, 0.8rem, 0);
+			@extend .fr;
+			.rules-icon-add-new {
+				@include padding(0, 1rem, 0, 1.6rem);
+				color: $aborder;
+				font-family: open_sanssemibold;
+				text-decoration: none;
+				&:hover {
+					color: $theadbg;
+				}
+			}
+			.rules-icon-timeline {
+				padding: 0.3rem 1rem 0.3rem 1.2rem;
+//				line-height: 10px;
+				color:$aborder;
+				font-size: 1.3rem;
+				&:hover {
+					color: $theadbg;
+				}
+			}
+			.rules-icon-download {
+				@include padding(0, 0rem, 0, 1.6rem);
+				border-left: 1px solid $aborder;
+				color:$aborder;
+				font-size: 1.3rem;
+				&:hover {
+					color: $theadbg;
+				}
+			}
+		}
+	}
+	.rules-content {
+		padding: 1.667rem;
+		.head {
+			color: $headtxt;
+			font-family: open_sansbold;
+			font-size: 1.6rem;
+		}
+		.table-icons {
+			@extend .fr;
+			a {
+				@include padding(0, 0.5rem, 0, 0.5rem);
+				&:last-child {
+					@include border(1px, none, none, none, $theadbg);
+				}
+				img {
+					height: 2.5rem;
+				}
+				&:first-child {
+					padding-right: 0;
+				}
+			}
+		}
+		.table-responsive {
+            max-height: 76vh;
+            overflow: auto;
+			table {
+                min-width: 1048px;
+				tbody {
+					tr {
+						&.draft {
+							.draft-txt{
+								color: $drafttxt;
+								font-size: 1rem;
+                                padding: 0 0 0 0.35rem;
+							}
+							.actions {
+								.action-buttons {
+									border-right: 1px solid lighten($primarytxt, 50%);
+								}
+								a {
+									color: lighten($secondarytxt, 30%);
+									&:hover {
+										color: lighten($secondarytxt, 30%);                                        
+									}
+								}
+							}
+						}
+					}
+					td {
+						&.status {
+							font-weight: 900;
+							text-transform: uppercase;
+							span {
+								height: 12px;
+								width: 12px;
+								display: inline-block;
+								background-size: 100%;
+								@include margin(0, 0.5rem, 0, 0);
+								&.process {
+									background-image: url(../assets/icons/Cirle_Blue_1x.svg);
+								}
+								&.success {
+									background-image: url(../assets/icons/Cirle_Green_1x.svg);
+								}
+								&.fail {
+									background-image: url(../assets/icons/Cirle_Red_1x.svg);
+								}
+							}
+						}
+						.actions {
+							a{
+								color:$primarytxt;
+								cursor: pointer;
+								padding:0 0.5rem;
+								display: inline-block;
+								font-size:1.2rem;
+								.icon-delete{
+								}
+								&:hover {
+									color:$headtxt;
+								}
+								.icon-export{
+									font-size:1.3rem;
+								}
+							}
+							.action-buttons {
+								@include padding(0, 1rem, 0, 0rem);
+								@include margin(-0.2rem, 0.3rem, 0, 0rem);
+								border-right: 1px solid $primarytxt;
+								&:hover {
+									color:$theadbg;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

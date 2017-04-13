@@ -1,0 +1,446 @@
+.create-manage-job {
+	.header {
+		@include padding(0rem, 0.9375rem, 0rem, 0rem);
+		.back {
+			@extend .fl;
+			padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+            background-color: $backbtnclr;
+            font-size: 1.3rem;
+		}
+		//        background: $header;
+		.page-title {
+			font-family: open_sanssemibold;
+			color: $titleColor;
+			font-size: 1.334rem;
+			@include padding(1.2rem, 1rem, 0.9rem, 1rem);
+			margin-bottom: 0rem;
+			text-transform: uppercase;
+			@extend .fl;
+		}
+	}
+	.create-manage-job-content {
+		padding: 1.667rem;
+		font-family: open_sanssemibold;
+		.create-manage-job-rows {
+			.title {
+				@include padding(0rem, 0rem, 0rem, 0rem);
+				font-size: 1.25rem;
+				color: $titleColor;
+				text-transform: uppercase;
+			}
+			.job-details {
+				.job-name {
+					span {
+						color: red;
+					}
+					label {
+						width: 12rem;
+						color: $aborder;
+						font-size: 1.1667rem;
+					}
+					.job-input {
+						display: inline-block;
+						input {
+							width: 37rem;
+							padding: 0.5rem 1rem;
+							border-radius: 3px;
+							font-size: 1.1667rem;
+							color: $secondarytxt;
+							font-family: open_sansregular;
+						}
+					}
+				}
+			}
+			.schedule-job {
+				margin-top: -0.5rem;
+				.schedule {
+					font-family: open_sansregular;
+					@include padding(1rem, 0.6rem, 1rem, 1rem);
+					border: 1px dashed darken($white, 20%);
+					font-size: 1.1667rem;
+					color: $secondarytxt;
+					width: 49rem;
+					.schedule-text {
+						table {
+							width: 100%;
+							font-size: 1.1667rem;
+							strong {
+								font-family: open_sansbold;
+								color: $primarytxt;
+							}
+						}
+					}
+					.set-schedule-action {
+						@extend .fr;
+						color: $aborder;
+						i {
+							padding-left: 1rem;
+							&:hover {
+								color: $theadbg;
+							}
+						}
+					}
+					.set-sechedule {
+						@extend .fr;
+						@include margin(-0.3rem, 0, 0, 0);
+					}
+				}
+			}
+			.job-steps {
+				width: 49rem;
+				@extend .schedule-job;
+				.job-title {
+					margin-bottom: 1rem;
+					a {
+						text-transform: uppercase;
+						@extend .fr;
+						color: $theadbg;
+						font-family: open_sanssemibold;
+						padding-top: 0.3rem;
+						font-size: 1.1667rem;
+						&:focus {
+							text-decoration: none;
+						}
+						&:hover {
+							color: $buttonhover;
+						}
+					}
+				}
+				.steps {
+					@extend .schedule;
+					text-align: center;
+				}
+			}
+			.job-step-edit {
+				width: 49rem;
+				@extend .job-steps;
+				table {
+					width: 100%;
+					border-radius: 0;
+					box-shadow: 2px 0px 4px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+					thead,
+					tfoot {
+						background: $theadbg;
+						font-size: 1.25rem;
+						font-family: open_sanssemibold;
+						tr {
+							background: transparent;
+							th {
+								@include padding(0.9rem, 1rem, 0.9rem, 1rem);
+								text-align: left;
+								color: $white;
+								//                                &:last-child {
+								//                                    text-align: right;
+								//                                }
+							}
+						}
+					}
+					tbody {
+						tr {
+							background: $white;
+							&:nth-child(even) {
+								background: $troweven;
+							}
+							&:hover {
+								background: $trowhov;
+							}
+							td {
+								@include padding(0.4rem, 1rem, 0.4rem, 1rem);
+								font-family: open_sansregular;
+								font-size: 1rem;
+								&.parameter-lookup {
+									// text-align: center;
+								}
+								i {
+									cursor: pointer;
+									&:hover {
+										color: $theadbg;
+									}
+								}
+								.icon-drag-column {
+									padding-right: 1rem;
+									color: $primarytxt;
+									cursor: url('../assets/images/grab.cur'), auto;
+									cursor: -webkit-grab;
+									cursor: -moz-grab;
+									cursor: grab;
+								}
+							}
+							&.ui-sortable-helper {
+								td {
+									.icon-drag-column {
+										cursor: url('../assets/images/grabbing.cur'), auto;
+										cursor: -webkit-grabbing;
+										cursor: -moz-grabbing;
+										cursor: grabbing;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.email-notification {
+				margin-top: -0.5rem;
+				.radio-button {
+					display: inline-block;
+					font-size: 1.1667rem;
+					font-family: open_sansregular;
+					.radio-inline{
+						.c-radio{
+							margin-left:-1.2rem;
+						}
+						.c-indicator{
+							@include margin(0.3rem,0,0,-0.5rem);
+						}
+					}	
+				}
+				.space {
+					padding-top: 0.5rem;
+				}
+				.notification-text {
+					padding-top: 0.8rem;
+					label {
+						color: $tborder;
+						font-family: open_sanssemibold;
+						font-size: 1.1667rem;
+						width: 12rem;
+						vertical-align: top;
+						padding-top: 1rem;
+					}
+					.active-label {
+						color: $primarytxt;
+					}
+					.notification-textarea {
+						width: 100%;
+						resize: none;
+						border-color: $tborder;
+						font-size: 1.1667rem;
+						@include padding(1rem,1rem,1rem,1rem);
+						background: $header;
+						border: 1px solid darken($white, 10%);
+						width: 37rem;
+						display: inline-block;
+						font-family: open_sansregular;
+					}
+					.notification-textarea-active {
+						width: 100%;
+						resize: none;
+						font-size: 1.1667rem;
+						@include padding(1rem,1rem,1rem,1rem);
+						width: 37rem;
+						display: inline-block;
+						font-family: open_sansregular;
+					}
+					#textarea1::-webkit-input-placeholder {
+						color: darken($white, 10%);
+					}
+					#textarea1:-ms-input-placeholder {
+						color: darken($white, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal-popup {
+	.popup-content {
+		.jobs-popup {
+			label {
+				color: $primarytxt;
+			}
+			.calendar {
+				float: left;
+				width: 17.75rem;
+				position: relative;
+				cursor:pointer;
+			}
+			.icon-calendar {
+				position: absolute;
+				top: 10px;
+				right: 8px;
+			}
+			.jobs-popup-title {
+				font-size: 1.25rem;
+				color: $primarytxt;
+				font-family: open_sanssemibold;
+				padding-bottom: 1rem;
+				padding-top: 0rem;
+			}
+			.date {
+				input {
+					border-radius: 3px;
+					font-family: open_sansregular;
+					font-size: 1.17rem;
+				}
+			}
+			.jobs-popup-title-1 {
+				.jobs-details {
+					font-size: 1.1667rem;
+					color: $primarytxt;
+					font-family: open_sanssemibold;
+					padding-bottom: 1rem;
+				}
+				padding-bottom:1rem;
+				label {
+					font-size: 1.1667rem;
+					color: $primarytxt;
+					margin-top: 0.5rem;
+				}
+				.jobs-input {
+					width: 99.5%;
+					padding: 0.5rem 1rem;
+					border-radius: 3px;
+					font-size: 1.1667rem;
+					color: $primarytxt;
+					font-family: open_sansregular;
+				}
+			}
+			.jobs-popup-title-2 {
+				@extend .jobs-popup-title-1;
+				border-bottom: 1px solid darken($white, 20%);
+			}
+			.jobs-popup-start-date {
+				@extend .jobs-popup-title-1;
+				.input-group {
+					float: left;
+					.input-group-addon {
+						position: absolute;
+						z-index: 2;
+						right: 1.0rem;
+						top: 0.5rem;
+						background-color: $white;
+						border: none;
+						color: $primarytxt;
+					}
+					input:hover,
+					:focus {
+						z-index: 2;
+					}
+				}
+				float: left;
+				.input-group-addon {
+					position: absolute;
+					z-index: 2;
+					right: 1.0rem;
+					top: 0.5rem;
+					background-color: $white;
+					border: none;
+					color: $primarytxt;
+				}
+				input:hover,
+				:focus {
+					z-index: 2;
+				}
+			}
+			.popup-date-format {
+				@extend .fl;
+				select {
+					margin-left: 0.5rem;
+				}
+			}
+		}
+		.jobs-popup-repeats {
+			@include padding(0rem,0,0rem,0);
+			color: $primarytxt;
+			.time-zone {
+				padding-bottom: 1rem;
+				.c-select {
+					width: 100%;
+					font-family: open_sansregular;
+				}
+			}
+			.repeats{
+				.radio-button {
+					display: inline-block;
+					.radio-inline{
+						.c-radio{
+							margin-left:-1.2rem;
+						}
+						.c-indicator{
+							@include margin(0.3rem,0,0,-0.5rem);
+						}
+					}	
+				}
+			}
+			.space {
+				padding-top: 0.7rem;
+			}
+			.repeat-until {
+				@extend .jobs-popup-start-date;
+				padding-top:1rem;
+			}
+			.dropdown-button {
+				width: 99.5%;
+			}
+			.repeat-frequency {
+				border-top: 1px solid lighten($black, 90%);
+				padding-top: 1rem;
+				margin-top: 1rem;
+				padding-bottom: 0.2499rem;
+				.repeat-frequency-option-monthly,.repeat-frequency-option-daily {
+					.radio-button {
+						display: inline-block;
+						.radio-inline{
+							.c-radio{
+								margin-left:-1.2rem;
+							}
+							.c-indicator{
+								@include margin(0.3rem,0,0,-0.5rem);
+							}
+						}	
+					}
+					.popup-date {
+						border-radius: 3px;
+						font-size: 1.1667rem;
+						color: $primarytxt;
+					}
+				}
+				.repeat-option {
+					padding-top: 1rem;
+				}
+			}
+		}
+		.radio-button-2 {
+			display: inline-block;
+			.radio-inline{
+				.c-radio{
+					margin-left:-1.2rem;
+				}
+				.c-indicator{
+					@include margin(0.3rem,0,0,-0.5rem);
+				}
+			}
+			.c-indicator{
+				@include margin(0.3rem,0,0,-0.5rem);
+			}
+			label {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.create-new-job-popup {
+	.title {
+		@include padding(0,0,1rem,0);
+		font-size: 1.1667rem;
+		font-family: open_sanssemibold;
+		color: $primarytxt;
+		text-transform: uppercase;
+	}
+	.select-options {
+		margin-bottom: 1.2499rem;
+		label {
+			margin-top: 0.6rem;
+		}
+		label {
+			font-size: 1.125rem;
+			color: $primarytxt;
+		}
+		.c-select {
+			width: 100%;
+		}
+	}
+}

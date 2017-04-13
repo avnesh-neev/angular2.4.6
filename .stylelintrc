@@ -1,0 +1,11 @@
+{
+  'defaultSeverity': 'warning',
+  'extends': 'stylelint-config-sass-guidelines',
+  'ignoreFiles': 'src/styles/bootstrap/*.scss',
+  'rules': {
+    'declaration-block-properties-order': null,
+    'order/declaration-block-properties-alphabetical-order': null,
+    'indentation': 4,
+    'stylelint-disable-reason': null
+  }
+}

@@ -1,0 +1,209 @@
+//Add New Connector
+.marketplace {
+    .header {
+        @include padding(0rem, 0.9375rem, 0rem, 0rem);
+        //        background: $header;
+        .back {
+            padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+            background-color: $backbtnclr;
+            font-size: 1.3rem;
+        }
+        .page-title {
+            display: inline-block;
+            font-family: open_sansbold;
+            color: $titleColor;
+            text-transform: uppercase;
+            font-size: 1.334rem;
+            @include padding(1rem, 0, 0, 1.5rem);
+        }
+        .download {
+            @extend .fr;
+            width: 2.25rem;
+            @include margin(0.5rem, 0, 0.5rem, 0);
+        }
+        .toggle-installed {
+            @include padding (1.1rem,0.7rem,0.3rem,0rem);
+			.cmn-toggle{
+				
+			}
+        }
+    }
+    .marketplace-content {
+        @include padding(1rem, 1rem, 0, 1rem);
+
+        .head {
+            @include margin(2rem,0,1rem,0);
+            color: $headtxt;
+            font-family: open_sansbold;
+            font-size: 1.6rem;
+        }
+        .connectors {
+            position: relative;
+            @include padding(0, 1rem, 0, 1rem);
+            .connectors-card {
+                @include margin(1rem, 2rem, 1rem, 0);
+                // float: left;
+                display: inline-block;
+                width: 260px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+                border-radius: 2px;
+                -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                background: $white;
+                .card-logo {
+                    margin: 0 auto;
+                    position: relative;
+                    cursor: pointer;
+                    .installed-apps-icon {
+                        color:$theadbg;
+                        position: absolute;
+                        font-size: 1.25rem;
+                        right: 1rem;
+                        top: 1rem;
+                    }
+                    .img {
+                        height: 125px;
+                        text-align: center;
+                        white-space: nowrap;
+                        .helper {
+                            display: inline-block;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                        img {
+                            height: 100px;
+                        }
+                    }
+                    .heading {
+                        color: lighten($black, 30%);
+                        color: $white;
+                        font-family: 'open_sanssemibold';
+                        text-transform: uppercase;
+                        font-size: 1.1667rem;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        background: $theadbg;
+                        padding: 1rem;
+                        margin: 0rem;
+                        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.1), 0 2px 1px -1px rgba(0, 0, 0, 0.1);
+                    }
+                }
+                .details {
+                    color: $headtxt;
+                    text-align: right;
+                    font-family: 'open_sanssemibold';
+                    text-transform: uppercase;
+                    @include margin (1rem,0.5rem,0,0);
+                }
+                &:hover, &.cardactive {
+                    // @include border (1px, lighten($headtxt, 30%), lighten($headtxt, 30%), lighten($headtxt, 30%), lighten($headtxt, 30%));
+                    background: lighten($headtxt, 50%);
+                    background: $troweven;
+                }
+            }
+            .card-details {
+                float: left;
+                display: block;
+                width: 100%;
+                @include margin (1rem, 0, 1rem, 0);
+                background: $white;
+                @include padding (1rem, 1rem, 1rem, 1rem);
+                border: 1px solid darken($header, 10%);
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                border-radius: 4px;
+                -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                .description {
+                    border-radius: 2px 0 0 2px;
+                    @include padding (1.5rem, 1.5rem, 0, 1.5rem);
+
+                    h5 {
+                        font-family: 'open_sanssemibold';
+                        color: $titleColor;
+                        font-size:  1.334rem;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 1.1667rem;
+                        color: $aborder;
+                        font-family: open_sansregular;
+                    }
+                }
+                .versions {
+                    border-radius: 0 2px 2px 0;
+                    @include padding (1.5rem, 1.5rem, 1.5rem, 1.5rem);
+                    border-left: 1px solid darken($white,20%);
+
+                    position: relative;
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        right: 1rem;
+                        opacity: 1;
+                        i {
+                            cursor: pointer;
+                            color: lighten($black, 75%);
+                            font-weight: bold;
+                            &:hover {
+                                color: lighten($black, 50%);
+                            }
+                        }
+                    }
+                    h5 {
+                        color: lighten($black, 30%);
+                        font-family: 'open_sanssemibold';
+                        font-size:  1.334rem;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size:  1.1667rem;
+                        color: $aborder;
+                        &.installed {
+                            font-family: 'open_sanssemibold';
+                            text-transform: uppercase;
+                            padding-top: 1rem;
+                            color: $headtxt;
+                            font-size: 1.1rem;
+                            .create {
+                                color: $white;
+                                text-transform: uppercase;
+                                padding: 0.5rem 1rem;
+                                background: $headtxt;
+                                border-radius: 0.2rem;
+                                @extend .fl;
+                            }
+                            span {
+                                @extend .fr;
+                                font-size: 1.1667rem;
+                                margin-top: 0.3rem;
+                                color: #41bd53;
+                            }
+                        }
+                        &.sales {
+                            //							border-top: 1px solid lighten($black, 75%);
+                            font-size: 1.1667rem;
+                            padding-top: 1rem;
+                            color: #ff615e;
+                            margin-bottom: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+        hr {
+            @include border (1px, none, none, darken($header, 10%), none);
+            @include margin( 3rem, 1rem, 0, 1rem);
+
+        }
+    }
+}

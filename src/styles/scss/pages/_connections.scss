@@ -1,0 +1,152 @@
+.connections {
+    .header {
+        @include padding(0.235rem, 1.6rem, 0.1rem, 1.667rem);
+        .page-title {
+            font-family: open_sanssemibold;
+            color: $titleColor;
+            text-transform: uppercase;
+            font-size: 1.334rem;
+            @include margin(1rem, 0, 1rem, 0);
+        }
+        .header-config-connector-icons {
+            @include padding(1.05rem, 0, 1rem, 0);
+            vertical-align: middle;
+            @extend .fr;
+            .connector-icon-add-new {
+                @include padding(0, 1rem, 0, 1.6rem);
+                color: $theadbg;
+                font-family: open_sanssemibold;
+                text-decoration: none;
+                font-size: 1.1667rem;
+                &:hover {
+                    color: $buttonhover;
+                }
+            }
+            .connector-icon-timeline {
+                padding: 0rem 1.2rem;
+                border-right: 1px solid $primarytxt;
+                border-left: 1px solid $primarytxt;
+                line-height: 10px;
+                color:$primarytxt;
+                font-size: 1.6rem;
+                vertical-align: inherit;
+                &:hover {
+                    color: $theadbg;
+                }
+            }
+            .connector-icon-download {
+                @include padding(0, 0rem, 0, 1.2rem);
+                color:$primarytxt;
+                font-size: 1.4rem;
+                vertical-align: inherit;
+                &:hover {
+                    color: $theadbg;
+                }
+            }
+        }
+    }
+    .connections-content {
+        margin: 1.667rem;
+        .head {
+            color: $headtxt;
+            font-family: open_sansbold;
+            font-size: 1.6rem;
+        }
+        .table-icons {
+            @extend .fr;
+            a {
+                @include padding(0, 0.5rem, 0, 0.5rem);
+                &:last-child {
+                    @include border(1px, none, none, none, $theadbg);
+                }
+                img {
+                    height: 2.5rem;
+                }
+                &:first-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .table-responsive {
+            max-height: 76vh;
+            overflow: auto;
+            table {
+                tbody {
+                    tr {
+                        &.draft {
+                            .draft-txt{
+                                color: $drafttxt;
+                                font-size: 1rem;
+                                padding: 0 0 0 0.35rem;
+                            }
+                            .actions {
+                                .action-buttons {
+                                    border-right: 1px solid lighten($primarytxt, 50%);
+                                }
+                                a {
+                                    color: lighten($secondarytxt, 30%);
+                                    &:hover {
+                                        color: lighten($secondarytxt, 30%);                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    td {
+                        &:first-child {
+                            max-width: 10vw;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        &.status {
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            span {
+                                height: 12px;
+                                width: 12px;
+                                display: inline-block;
+                                background-size: 100%;
+                                @include margin(0, 0.5rem, 0, 0);
+                                &.process {
+                                    background-image: url(../assets/icons/Cirle_Blue_1x.svg);
+                                }
+                                &.success {
+                                    background-image: url(../assets/icons/Cirle_Green_1x.svg);
+                                }
+                                &.fail {
+                                    background-image: url(../assets/icons/Cirle_Red_1x.svg);
+                                }
+                            }
+                        }
+                        .actions {
+                            a{
+                                color:$primarytxt;
+                                cursor: pointer;
+                                padding:0 0.4rem;
+                                display: inline-block;
+                                font-size:1.2rem;
+                                .icon-delete{
+                                }
+                                &:hover {
+                                    color:$headtxt;
+                                }
+                                .icon-export{
+                                    font-size:1.3rem;
+                                }
+                            }
+                            .action-buttons {
+                                @include padding(0, 1rem, 0, 0rem);
+                                @include margin(-0.2rem, 0, 0, 0rem);
+                                border-right: 1px solid $primarytxt;
+                                &:hover {
+                                    color:$theadbg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
